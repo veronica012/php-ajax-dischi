@@ -8,6 +8,16 @@
         <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
+        <header>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1200px-Spotify_logo_without_text.svg.png" alt="">
+            </div>
+            <div class="genere-musicale">
+                <select class="" name="">
+                    <option value="">Tutti i generi</option>
+                </select>
+            </div>
+        </header>
         <div class="container-dischi"></div>
         <script id="entry-template" type="text/x-handlebars-template">
             <div class="disco" data-genre="{{ genere }}">

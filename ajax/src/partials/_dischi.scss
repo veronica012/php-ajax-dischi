@@ -1,0 +1,19 @@
+.disco {
+    width: 200px;
+    height: 300px;
+    background-color: $colore_principale;
+    padding: 10px;
+    float: left;
+    color: white;
+    font-family: sans-serif;
+    margin-bottom: $margini-card;
+    margin-left: $margini-card;
+    border-radius: $border_radius;
+}
+.disco img {
+    max-width: 100%;
+}
+select {
+    border-radius: $border-radius;
+    padding: 3px;
+}
