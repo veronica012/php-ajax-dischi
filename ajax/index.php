@@ -5,7 +5,7 @@
         <title>Dischi</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="dist/app.css">
     </head>
     <body>
         <div class="container-dischi"></div>
@@ -18,6 +18,6 @@
                     <p class="card-text">{{anno}}</p>
             </div>
         </script>
-        <script src="js/main.js" charset="utf-8"></script>
+        <script src="dist/app.js" charset="utf-8"></script>
     </body>
 </html>
