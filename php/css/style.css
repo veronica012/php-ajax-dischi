@@ -20,6 +20,8 @@ body {
     float: left;
     color: white;
     font-family: sans-serif;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 .disco img {
     max-width: 100%;

@@ -9,19 +9,32 @@ $(document).ready(function(){
             for (var i = 0; i < dischi.length; i++) {
             //recupero il disco corrente
                 var disco_corrente = dischi[i];
-                // console.log(disco_corrente);
+            //creo la card
+            var disco = $('<div class="disco"></div>');
+            //append dell'immagine
+            disco.append('<img src="'+ disco_corrente.poster + '" alt="">');
+            //append del titolo
+            disco.append('<h5 class="titolo">' + disco_corrente.title +'</h5>');
+            //append dell'autore
+            disco.append('<p class="card-text">'+ disco_corrente.author +'</p>');
+            //append del genere
+            disco.append('<p class="card-text">'+ disco_corrente.genre +'</p>');
+            //append dell'anno
+            disco.append('<p class="card-text">'+ disco_corrente.year +'</p>');
             //di ogni disco recupero il valore delle chiavi con la dot notation
-                var poster = disco_corrente.poster;
-                // console.log(poster);
-                var titolo = disco_corrente.title;
+                // var poster = disco_corrente.poster;
+                // // console.log(poster);
+                // var titolo = disco_corrente.title;
                 // console.log(titolo);
-                var autore = disco_corrente.author;
+                // var autore = disco_corrente.author;
                 // console.log(autore);
-                var genere = disco_corrente.genre;
+                // var genere = disco_corrente.genre;
                 // console.log(genere);
-                var anno = disco_corrente.year;
+                // var anno = disco_corrente.year;
                 // console.log(anno);
+                $('.container-dischi').append(disco);
             }
+
 
         } ,
         'error': function() {
