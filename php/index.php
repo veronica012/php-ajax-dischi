@@ -19,14 +19,7 @@
                     <p class="card-text"><?php echo $disco['year']?></p>
                     <?php
             }?>
-
-
-
-
-
-
             </div>
-
         </div>
     </body>
 </html>
