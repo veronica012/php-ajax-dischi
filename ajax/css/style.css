@@ -7,7 +7,7 @@ body {
     background-color: #F5F5F5;
 }
 .container-dischi{
-    width: 1200px;
+    width: 1100px;
     height: 100%;
     margin: auto;
     padding: 100px 0;
@@ -20,6 +20,8 @@ body {
     float: left;
     color: white;
     font-family: sans-serif;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 .disco img {
     max-width: 100%;

@@ -17,9 +17,9 @@
                     <p class="card-text"><?php echo $disco['author']?></p>
                     <p class="card-text"><?php echo $disco['genre']?></p>
                     <p class="card-text"><?php echo $disco['year']?></p>
+                </div>
                     <?php
             }?>
-            </div>
         </div>
     </body>
 </html>
