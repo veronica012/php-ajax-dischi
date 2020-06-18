@@ -8,6 +8,21 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <header>
+            <div class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1200px-Spotify_logo_without_text.svg.png" alt="">
+            </div>
+            <div class="scegli-autore">
+                <select class="autori" name="">
+                    <option value="">Tutti gli artisti</option>
+                    <?php
+                    foreach ($dischi as $disco) { ?>
+                    <option value=""> <?php echo $disco['author'] ?></option>
+                    <?php
+                } ?>
+                </select>
+            </div>
+        </header>
         <div class="container-dischi">
             <?php
             foreach ($dischi as $disco) {?>

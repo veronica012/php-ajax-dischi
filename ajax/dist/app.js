@@ -112,7 +112,18 @@ $(document).ready(function () {
     'method': 'GET',
     'success': function success(dischi) {
       disegnaDisco(dischi); // console.log(dischi);
+
+      popolaSelect(dischi);
     },
+    'error': function error() {
+      alert('Errore');
+    }
+  }); //fine chiamata ajax
+
+  $.ajax({
+    'url': 'database/lista_dischi.php',
+    'method': 'GET',
+    'success': function success(dischi) {},
     'error': function error() {
       alert('Errore');
     }
@@ -142,6 +153,16 @@ $(document).ready(function () {
 
   } //fine funzione
 
+
+  function popolaSelect(lista_dischi) {
+    for (var j = 0; j < lista_dischi.length; j++) {
+      var disco = lista_dischi[j];
+      console.log(disco);
+      var autore_canzone = disco.author;
+      console.log(autore_canzone);
+      $('select').append('<option value="' + autore_canzone + '">' + autore_canzone + '</option>');
+    }
+  }
 }); //esercizio svolto senza handlebars
 // for (var i = 0; i < dischi.length; i++) {
 // //recupero il disco corrente

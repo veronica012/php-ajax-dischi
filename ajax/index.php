@@ -12,9 +12,9 @@
             <div class="logo">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1200px-Spotify_logo_without_text.svg.png" alt="">
             </div>
-            <div class="genere-musicale">
-                <select class="" name="">
-                    <option value="">Tutti i generi</option>
+            <div class="scegli-autore">
+                <select class="autori" name="">
+                    <option value="">Tutti gli artisti</option>
                 </select>
             </div>
         </header>
