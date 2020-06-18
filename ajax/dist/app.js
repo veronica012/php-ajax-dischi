@@ -120,15 +120,18 @@ $(document).ready(function () {
     }
   }); //fine chiamata ajax
 
-  $.ajax({
-    'url': 'database/lista_dischi.php',
-    'method': 'GET',
-    'success': function success(dischi) {},
-    'error': function error() {
-      alert('Errore');
-    }
-  }); //fine chiamata ajax
-  //FUNZIONI
+  $('.autori').change(function () {
+    var autore_selezionato = $(this).val();
+    console.log(autore_selezionato);
+    $.ajax({
+      'url': 'database/lista_dischi.php?artista=' + autore_selezionato,
+      'method': 'GET',
+      'success': function success(dischi) {},
+      'error': function error() {
+        alert('Errore');
+      }
+    }); //fine chiamata ajax
+  }); //FUNZIONI
 
   function disegnaDisco(array) {
     var template_html = $('#entry-template').html();
@@ -158,8 +161,8 @@ $(document).ready(function () {
     for (var j = 0; j < lista_dischi.length; j++) {
       var disco = lista_dischi[j];
       console.log(disco);
-      var autore_canzone = disco.author;
-      console.log(autore_canzone);
+      var autore_canzone = disco.author; // console.log(autore_canzone);
+
       $('select').append('<option value="' + autore_canzone + '">' + autore_canzone + '</option>');
     }
   }

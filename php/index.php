@@ -1,5 +1,7 @@
 <?php include 'database/lista_dischi.php' ?>
+<?php
 
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>

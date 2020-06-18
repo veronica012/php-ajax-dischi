@@ -1,4 +1,5 @@
 <?php
+$artista = $_GET ['artista'];
 
 $dischi = [
     [
