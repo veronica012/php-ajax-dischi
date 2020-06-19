@@ -119,19 +119,24 @@ $(document).ready(function () {
       alert('Errore');
     }
   }); //fine chiamata ajax
-
-  $('.autori').change(function () {
-    var autore_selezionato = $(this).val();
-    console.log(autore_selezionato);
-    $.ajax({
-      'url': 'database/lista_dischi.php?artista=' + autore_selezionato,
-      'method': 'GET',
-      'success': function success(dischi) {},
-      'error': function error() {
-        alert('Errore');
-      }
-    }); //fine chiamata ajax
-  }); //FUNZIONI
+  // $('.autori').change(function(){
+  //     var autore_selezionato = $(this).val();
+  //     console.log(autore_selezionato);
+  //
+  //     $.ajax({
+  //         'url': 'database/lista_dischi.php?autore=' + autore_selezionato,
+  //         'method': 'GET',
+  //         'success': function(filtro_autori) {
+  //             disegnaDisco(filtro_autori);
+  //
+  //         },
+  //         'error': function() {
+  //             alert('Errore');
+  //         }
+  //
+  //     }); //fine chiamata ajax
+  // });
+  //FUNZIONI
 
   function disegnaDisco(array) {
     var template_html = $('#entry-template').html();
@@ -147,6 +152,7 @@ $(document).ready(function () {
     for (var i = 0; i < array.length; i++) {
       var elemento_corrente = array[i];
       data.poster = elemento_corrente.poster;
+      data.autore = elemento_corrente.author;
       data.titolo = elemento_corrente.title;
       data.genere = elemento_corrente.genre;
       data.anno = elemento_corrente.year;

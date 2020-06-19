@@ -1,4 +1,4 @@
-<?php include 'database/lista_dischi.php' ?>
+<?php include '../database/lista_dischi.php' ?>
 <?php
 
 ?>
