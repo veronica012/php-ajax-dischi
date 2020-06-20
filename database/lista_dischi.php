@@ -74,11 +74,28 @@ $dischi = [
     ]
 ];
 
+
+
 if ( !empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest' ) {
-// var_dump($dischi);
-header('Content-Type: application/json');
-//la funzione json_encode permette di tradurre un array php in un oggetto json
-echo json_encode($dischi);
+    if(isset($_GET['autore'])) {
+        $autori = [];
+        $autore = $_GET['autore'];
+        foreach ($dischi as $disco) {
+            if($autore == $disco['author']) {
+                $autori[] = $disco;
+            }
+        }
+        $dischi = $autori;
+    }
+
+
+
+
+    header('Content-Type: application/json');
+    //la funzione json_encode permette di tradurre un array php in un oggetto json
+    echo json_encode($dischi);
+
+
 }
 
 ?>

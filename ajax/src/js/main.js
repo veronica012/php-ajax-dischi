@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //chiamata ajax per recuperare l'array di dischi dal file lista_dischi.php che si trova in database
     //l'array contiene 10 oggetti
-if($('.container-dischi').attr('data-is-ajax') == '1')) {
+if($('.container-dischi').attr('data-is-ajax') == '1') {
     $.ajax({
         'url': '../database/lista_dischi.php',
         'method': 'GET',
@@ -15,23 +15,27 @@ if($('.container-dischi').attr('data-is-ajax') == '1')) {
     }); //fine chiamata ajax
 } //fine if
 
-    // $('.autori').change(function(){
-    //     var autore_selezionato = $(this).val();
-    //     console.log(autore_selezionato);
-    //
-    //     $.ajax({
-    //         'url': 'database/lista_dischi.php?autore=' + autore_selezionato,
-    //         'method': 'GET',
-    //         'success': function(filtro_autori) {
-    //             disegnaDisco(filtro_autori);
-    //
-    //         },
-    //         'error': function() {
-    //             alert('Errore');
-    //         }
-    //
-    //     }); //fine chiamata ajax
-    // });
+    $('.autori').change(function(){
+        var autore_selezionato = $(this).val();
+        console.log(autore_selezionato);
+// togli le card mostri solo quele cge l utente vuole
+        $('.container-dischi').html('');
+        $.ajax({
+            'url': '../database/lista_dischi.php',
+            'method': 'GET',
+            'data' : {
+                'autore' : autore_selezionato
+            },
+            'success': function(filtro_autori) {
+                disegnaDisco(filtro_autori);
+
+            },
+            'error': function() {
+                alert('Errore');
+            }
+
+        }); //fine chiamata ajax
+    });
 
 
 
