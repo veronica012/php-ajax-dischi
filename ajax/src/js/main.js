@@ -18,7 +18,9 @@ if($('.container-dischi').attr('data-is-ajax') == '1') {
     $('.autori').change(function(){
         var autore_selezionato = $(this).val();
         console.log(autore_selezionato);
-// togli le card mostri solo quele cge l utente vuole
+
+//al change della select tolgo i dischi della prima chiamata ajax e saranno mostrate solo quelle corrispondenti alla scelta dell'utente
+
         $('.container-dischi').html('');
         $.ajax({
             'url': '../database/lista_dischi.php',
